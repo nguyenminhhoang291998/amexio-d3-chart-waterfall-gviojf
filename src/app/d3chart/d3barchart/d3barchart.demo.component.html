@@ -1,0 +1,23 @@
+
+<amexio-d3-chart-waterfall 
+  [title]="'Product Information'" 
+  [data]="waterfallChartData"
+  [label]="true"
+  [label-color]="'white'"
+  (onChartClick)="onDefaultChartClick($event)"
+  (onLegendClick)="onUserDefineLegendClick($event)">
+</amexio-d3-chart-waterfall>
+<amexio-row>
+	<amexio-column [size]="12" [fit]="true">
+		<amexio-card header="true">
+			<amexio-header>
+				Click On Legend/Click on Chart
+			</amexio-header>
+			<amexio-body>
+				<pre><code>{{userDataSource |json }}</code></pre>
+
+			</amexio-body>
+		</amexio-card>
+
+	</amexio-column>
+</amexio-row>
